@@ -1,0 +1,1122 @@
+{
+  "metadados": {
+    "nome": "Consultor Avançado de Carreiras em TI",
+    "versao": "1.0.0",
+    "descricao": "Sistema Especialista baseado em regras com pontuação ponderada para orientação profissional em tecnologia.",
+    "escala_likert": {
+      "1": "Nenhuma afinidade",
+      "2": "Pouca",
+      "3": "Moderada",
+      "4": "Muita",
+      "5": "Total"
+    },
+    "escala_conhecimento": {
+      "0": "Nunca vi",
+      "1": "Conheço o básico",
+      "2": "Já pratiquei",
+      "3": "Domino"
+    }
+  },
+  "parametros": {
+    "tolerancia_empate_pct": 3.0,
+    "tamanho_ranking_destaque": 3,
+    "horas_estimadas_por_nivel_gap": 40
+  },
+  "niveis_senioridade": {
+    "iniciante": {
+      "nome": "Iniciante",
+      "descricao": "Fase de aprendizado dos fundamentos de programação, lógica e ferramentas básicas."
+    },
+    "junior": {
+      "nome": "Júnior",
+      "descricao": "Apto a executar tarefas com supervisão técnica pontual, conhece as ferramentas do dia a dia da trilha."
+    },
+    "pleno": {
+      "nome": "Pleno",
+      "descricao": "Possui autonomia para desenvolver funcionalidades completas, propor arquiteturas e resolver bugs complexos."
+    },
+    "senior": {
+      "nome": "Sênior",
+      "descricao": "Domínio técnico amplo, liderança de decisões de arquitetura, boas práticas e mentoria de outros membros."
+    }
+  },
+  "competencias_autoavaliacao": [
+    {
+      "id": "python",
+      "nome": "Python",
+      "descricao": "Linguagem e sintaxe básica, manipulação de dados e bibliotecas padrão."
+    },
+    {
+      "id": "sql",
+      "nome": "SQL & Bancos Relacionais",
+      "descricao": "Modelagem, joins, agrupamentos, índices e comandos CRUD."
+    },
+    {
+      "id": "git",
+      "nome": "Git & GitHub",
+      "descricao": "Controle de versão, branches, commits e resolução de pull requests."
+    },
+    {
+      "id": "linux",
+      "nome": "Linux & Linha de Comando",
+      "descricao": "Navegação por terminal, permissões de arquivos, processos e scripts bash."
+    },
+    {
+      "id": "html_css_js",
+      "nome": "HTML, CSS e JavaScript",
+      "descricao": "Estruturação semântica, estilos modernos (CSS/Flexbox) e interatividade básica com JS."
+    },
+    {
+      "id": "docker",
+      "nome": "Docker & Containers",
+      "descricao": "Criação de Dockerfiles, gerenciamento de imagens e orquestração com Docker Compose."
+    },
+    {
+      "id": "nuvem",
+      "nome": "Computação em Nuvem (AWS/Azure/GCP)",
+      "descricao": "Serviços fundamentais de computação, armazenamento, redes e IAM em nuvem."
+    },
+    {
+      "id": "estatistica",
+      "nome": "Estatística e Análise Exploratória",
+      "descricao": "Medidas de tendência central, dispersão, correlações e visualização de dados."
+    },
+    {
+      "id": "apis_rest",
+      "nome": "APIs RESTful & HTTP",
+      "descricao": "Métodos HTTP, códigos de status, autenticação via tokens e construção de endpoints."
+    },
+    {
+      "id": "testes_automatizados",
+      "nome": "Testes Automatizados",
+      "descricao": "Criação de testes unitários, testes de integração e uso de frameworks como pytest ou jest."
+    }
+  ],
+  "perguntas": [
+    {
+      "id": "escolaridade",
+      "texto": "Qual é o seu nível atual de escolaridade?",
+      "passo": 1,
+      "categoria": "perfil_pessoal",
+      "tipo": "escolha_unica",
+      "opcoes": [
+        "Ensino Médio",
+        "Graduação em andamento",
+        "Graduação concluída",
+        "Pós-graduação / Especialização"
+      ]
+    },
+    {
+      "id": "experiencia_programacao",
+      "texto": "Há quanto tempo você estuda ou pratica programação?",
+      "passo": 1,
+      "categoria": "perfil_pessoal",
+      "tipo": "escolha_unica",
+      "opcoes": [
+        "Ainda não comecei",
+        "Menos de 6 meses",
+        "De 6 meses a 2 anos",
+        "Mais de 2 anos"
+      ]
+    },
+    {
+      "id": "horas_semanais",
+      "texto": "Quantas horas por semana você consegue dedicar aos estudos?",
+      "passo": 1,
+      "categoria": "perfil_pessoal",
+      "tipo": "numerico",
+      "minimo": 2,
+      "maximo": 50,
+      "padrao": 10
+    },
+    {
+      "id": "nivel_ingles",
+      "texto": "Qual o seu nível de leitura técnica em inglês?",
+      "passo": 1,
+      "categoria": "perfil_pessoal",
+      "tipo": "escolha_unica",
+      "opcoes": [
+        "Básico (leio apenas com tradutor)",
+        "Intermediário (compreendo artigos técnicos e documentações com calma)",
+        "Avançado / Fluente (leio e assisto palestras sem dificuldades)"
+      ]
+    },
+    {
+      "id": "estilo_trabalho",
+      "texto": "Qual é o seu estilo preferido de rotina e colaboração?",
+      "passo": 1,
+      "categoria": "perfil_pessoal",
+      "tipo": "escolha_unica",
+      "opcoes": [
+        "Trabalho focado e individual na maior parte do tempo",
+        "Equilíbrio entre tarefas individuais e discussões em equipe",
+        "Interação constante com pessoas, reuniões e alinhamentos"
+      ]
+    },
+    {
+      "id": "logica_algoritmos",
+      "texto": "Gosto de resolver problemas lógicos desafiadores, modelar estruturas de dados e criar algoritmos eficientes.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "matematica_estatistica",
+      "texto": "Tenho facilidade e gosto por matemática aplicada, raciocínio estatístico e análise quantitativa de dados.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "design_visual_ux",
+      "texto": "Preocupa-me muito a parte visual, harmonia de cores, experiência e facilidade de uso para o usuário final.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "infra_servidores",
+      "texto": "Tenho curiosidade por entender o que acontece nos servidores, sistemas operacionais (Linux) e redes que sustentam as aplicações.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "redes_seguranca",
+      "texto": "Interesso-me por segurança da informação, análise de vulnerabilidades, ataques, criptografia e proteção cibernética.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "banco_dados",
+      "texto": "Gosto de estruturar bases de dados, modelar relacionamentos e escrever consultas SQL analíticas ou transacionais.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "automacao_scripts",
+      "texto": "Adoro criar scripts para automatizar processos manuais repetitivos e otimizar rotinas de trabalho.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "desenvolvimento_mobile",
+      "texto": "Tenho vontade de criar aplicativos móveis para Android e iOS, aproveitando recursos de smartphones.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "testes_qualidade",
+      "texto": "Sou atento a detalhes e gosto de tentar 'quebrar' softwares para identificar falhas, bugs e garantir a qualidade antes do lançamento.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "ia_machine_learning",
+      "texto": "Fascinam-me modelos de inteligência artificial, redes neurais e sistemas que aprendem padrões a partir de dados históricos.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "resolucao_pressao",
+      "texto": "Mantenho a calma e sinto-me estimulado ao investigar problemas urgentes e incidentes críticos em ambientes reais.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "gestao_comunicacao",
+      "texto": "Gosto de planejar entregas, negociar prazos, entender a necessidade do cliente e facilitar o trabalho em time.",
+      "passo": 2,
+      "categoria": "afinidade_tecnica",
+      "tipo": "likert"
+    },
+    {
+      "id": "trabalho_criativo_visual",
+      "texto": "Prefiro trabalhar em produtos tangíveis e visuais a lidar apenas com regras de negócio e fluxos abstratos.",
+      "passo": 3,
+      "categoria": "objetivo_carreira",
+      "tipo": "likert"
+    },
+    {
+      "id": "interesse_lideranca",
+      "texto": "Tenho ambição de liderar projetos ou produtos, influenciando o direcionamento do negócio em vez de focar 100% em código técnico.",
+      "passo": 3,
+      "categoria": "objetivo_carreira",
+      "tipo": "likert"
+    },
+    {
+      "id": "tolerancia_oncall",
+      "texto": "Aceito participar de escalas de plantão (on-call) ou suporte fora do horário comercial se houver boa compensação.",
+      "passo": 3,
+      "categoria": "objetivo_carreira",
+      "tipo": "likert"
+    },
+    {
+      "id": "preferencia_remoto",
+      "texto": "Para mim é prioridade atuar em áreas consolidadas com alto volume de oportunidades 100% remotas.",
+      "passo": 3,
+      "categoria": "objetivo_carreira",
+      "tipo": "likert"
+    },
+    {
+      "id": "busca_retorno_rapido",
+      "texto": "Priorizo entrar no mercado no menor tempo possível, escolhendo trilhas com alta oferta de vagas de entrada.",
+      "passo": 3,
+      "categoria": "objetivo_carreira",
+      "tipo": "likert"
+    }
+  ],
+  "trilhas": [
+    {
+      "id": "backend",
+      "nome": "Desenvolvimento Back-end",
+      "descricao": "Construção de APIs, regras de negócio, persistência de dados, integração de sistemas e garantia de escalabilidade.",
+      "pesos": {
+        "logica_algoritmos": 10,
+        "banco_dados": 9,
+        "automacao_scripts": 7,
+        "testes_qualidade": 6,
+        "infra_servidores": 6,
+        "preferencia_remoto": 5,
+        "busca_retorno_rapido": 6
+      },
+      "penalidades": [
+        {
+          "pergunta": "logica_algoritmos",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 10,
+          "motivo": "Desenvolvimento Back-end exige raciocínio lógico sólido para estruturar regras de negócio."
+        },
+        {
+          "pergunta": "banco_dados",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 8,
+          "motivo": "Back-end depende diretamente de integração e manipulação contínua de bancos de dados."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "python",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "sql",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "apis_rest",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 2,
+          "peso": 3
+        },
+        {
+          "competencia": "testes_automatizados",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "docker",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Python moderno e Programação Orientada a Objetos",
+          "Construção de APIs REST com FastAPI ou Flask",
+          "Modelagem relacional e ORM (SQLAlchemy / PostgreSQL)",
+          "Testes unitários e de integração com pytest",
+          "Containerização básica com Docker"
+        ],
+        "certificacoes": [
+          {
+            "nome": "AWS Certified Cloud Practitioner (CLF-C02)",
+            "emissor": "Amazon Web Services",
+            "descricao": "Certificação de entrada excelente para comprovar domínio dos fundamentos de serviços em nuvem."
+          },
+          {
+            "nome": "GitHub Foundations",
+            "emissor": "GitHub",
+            "descricao": "Demonstra domínio de fluxo de trabalho colaborativo, Git e automações básicas com GitHub Actions."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "API REST de Gestão Financeira com Autenticação JWT",
+            "descricao": "Desenvolvimento de endpoints completos de receitas/despesas, autenticação segura com JWT, migrações com Alembic e documentação Swagger automática.",
+            "tecnologias": ["Python", "FastAPI", "PostgreSQL", "Docker", "Pytest"]
+          },
+          {
+            "titulo": "Microsserviço de Notificações com Fila Assíncrona",
+            "descricao": "Serviço que processa e dispara e-mails e webhooks usando mensageria simples e boas práticas de tratamento de erros.",
+            "tecnologias": ["Python", "Redis", "Celery", "Docker Compose"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "frontend",
+      "nome": "Desenvolvimento Front-end & UX",
+      "descricao": "Criação de interfaces web responsivas, dinâmicas e acessíveis, priorizando a usabilidade e a experiência do usuário.",
+      "pesos": {
+        "design_visual_ux": 10,
+        "trabalho_criativo_visual": 9,
+        "logica_algoritmos": 7,
+        "testes_qualidade": 5,
+        "busca_retorno_rapido": 7,
+        "preferencia_remoto": 6
+      },
+      "penalidades": [
+        {
+          "pergunta": "design_visual_ux",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 12,
+          "motivo": "Front-end exige grande sensibilidade e apreço por design, estética e experiência do usuário."
+        },
+        {
+          "pergunta": "trabalho_criativo_visual",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 8,
+          "motivo": "A rotina de Front-end envolve constante interação com protótipos e construção visual."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "html_css_js",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 2,
+          "peso": 3
+        },
+        {
+          "competencia": "apis_rest",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "testes_automatizados",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "HTML5 Semântico, CSS3 Moderno (Flexbox, Grid, Variáveis)",
+          "JavaScript ES6+ (Promises, Async/Await, Manipulação de DOM)",
+          "Framework reativo (React ou Vue.js)",
+          "Consumo de APIs REST e gerenciamento de estado",
+          "Princípios de UI/UX, Acessibilidade (WCAG) e Tailwind CSS"
+        ],
+        "certificacoes": [
+          {
+            "nome": "Meta Front-End Developer Professional Certificate",
+            "emissor": "Meta / Coursera",
+            "descricao": "Certificação prática que cobre React, JavaScript, design de interface e controle de versão."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Dashboard Interativo de Vendas com React e Tailwind",
+            "descricao": "Interface moderna com modo escuro/claro, filtros por período, gráficos dinâmicos e consumo de API pública.",
+            "tecnologias": ["React", "TypeScript", "Tailwind CSS", "Recharts"]
+          },
+          {
+            "titulo": "E-commerce Front-end com Carrinho e Checkout Simulado",
+            "descricao": "Aplicação responsiva com catálogo de produtos, busca em tempo real, persistência em localStorage e validação de formulários.",
+            "tecnologias": ["JavaScript ES6+", "HTML5", "CSS Modules", "Context API"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciencia_dados",
+      "nome": "Ciência de Dados",
+      "descricao": "Extração de insights, modelagem estatística, criação de algoritmos de aprendizado de máquina e tomada de decisão orientada a dados.",
+      "pesos": {
+        "matematica_estatistica": 10,
+        "ia_machine_learning": 10,
+        "logica_algoritmos": 7,
+        "banco_dados": 6,
+        "preferencia_remoto": 5
+      },
+      "penalidades": [
+        {
+          "pergunta": "matematica_estatistica",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 12,
+          "motivo": "Ciência de Dados exige boa base em matemática, estatística e probabilidade para interpretação de modelos."
+        },
+        {
+          "pergunta": "ia_machine_learning",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 10,
+          "motivo": "A trilha tem foco central na aplicação de modelos de Machine Learning e Inteligência Artificial."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "python",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "estatistica",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "sql",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Python científico: NumPy, Pandas e Matplotlib/Seaborn",
+          "Estatística inferencial e análise exploratória de dados (EDA)",
+          "Machine Learning clássico com Scikit-Learn (regressão, classificação, clustering)",
+          "SQL para extração e agregação analítica",
+          "Introdução a frameworks de Deep Learning ou NLP"
+        ],
+        "certificacoes": [
+          {
+            "nome": "Google Data Analytics Professional Certificate",
+            "emissor": "Google / Coursera",
+            "descricao": "Comprova proficiência em limpeza de dados, análise estatística e visualização prática."
+          },
+          {
+            "nome": "Databricks Certified Data Scientist Associate",
+            "emissor": "Databricks",
+            "descricao": "Validação de habilidades em aprendizado de máquina e análise em larga escala."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Previsão de Churn de Clientes com Análise de Risco",
+            "descricao": "Notebook completo com EDA detalhada, pré-processamento, balanceamento de classes, treino de modelos comparativos e avaliação de métricas de negócio.",
+            "tecnologias": ["Python", "Pandas", "Scikit-Learn", "Seaborn", "Streamlit"]
+          },
+          {
+            "titulo": "Sistema de Recomendação de Produtos com Filtragem Colaborativa",
+            "descricao": "Implementação de algoritmo de recomendação baseado em similaridade de cosseno e histórico de compras dos usuários.",
+            "tecnologias": ["Python", "NumPy", "Pandas", "FastAPI"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "engenharia_dados",
+      "nome": "Engenharia de Dados",
+      "descricao": "Construção de pipelines de dados robustos, modelagem de Data Warehouses, orquestração e arquitetura de dados em larga escala.",
+      "pesos": {
+        "banco_dados": 10,
+        "automacao_scripts": 8,
+        "logica_algoritmos": 8,
+        "infra_servidores": 6,
+        "matematica_estatistica": 5,
+        "preferencia_remoto": 5
+      },
+      "penalidades": [
+        {
+          "pergunta": "banco_dados",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 12,
+          "motivo": "Engenharia de Dados tem como pilar fundamental o domínio profundo de modelagem e consulta a bancos de dados."
+        },
+        {
+          "pergunta": "automacao_scripts",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 8,
+          "motivo": "A rotina envolve criação diária de fluxos automatizados e pipelines de ingestão de dados."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "sql",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "python",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "linux",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "docker",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "SQL avançado (Window functions, CTEs e particionamento)",
+          "Python voltado a dados e integração com APIs",
+          "Modelagem dimensional (Star Schema / Snowflake)",
+          "Orquestração de pipelines (Apache Airflow ou Prefect)",
+          "Fundamentos de Data Lakehouse e processamento distribuído (Spark)"
+        ],
+        "certificacoes": [
+          {
+            "nome": "Databricks Certified Data Engineer Associate",
+            "emissor": "Databricks",
+            "descricao": "Reconhecimento internacional no desenvolvimento de pipelines de dados modernos."
+          },
+          {
+            "nome": "Microsoft Certified: Azure Data Engineer Associate (DP-203)",
+            "emissor": "Microsoft",
+            "descricao": "Comprova competência em design e implementação de soluções de armazenamento e processamento na nuvem."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Pipeline ETL Automatizado com Airflow e Postgres",
+            "descricao": "DAG no Airflow que extrai dados de uma API pública, aplica transformações de limpeza e alimenta um Data Mart relacional diariamente.",
+            "tecnologias": ["Python", "Apache Airflow", "PostgreSQL", "Docker"]
+          },
+          {
+            "titulo": "Data Warehouse Dimensional para Vendas Globais",
+            "descricao": "Projeto de modelagem dimensional com tabelas fato e dimensões, scripts de carga incremental e documentação de linhagem de dados.",
+            "tecnologias": ["SQL", "dbt", "DuckDB / BigQuery", "GitHub Actions"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciberseguranca",
+      "nome": "Cibersegurança & Defesa Cibernética",
+      "descricao": "Proteção de redes, detecção de ameaças, resposta a incidentes de segurança, testes de invasão e conformidade técnica.",
+      "pesos": {
+        "redes_seguranca": 10,
+        "infra_servidores": 8,
+        "resolucao_pressao": 7,
+        "automacao_scripts": 6,
+        "testes_qualidade": 6,
+        "tolerancia_oncall": 5
+      },
+      "penalidades": [
+        {
+          "pergunta": "redes_seguranca",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 14,
+          "motivo": "Cibersegurança é uma área altamente especializada que exige interesse genuíno por segurança e redes."
+        },
+        {
+          "pergunta": "infra_servidores",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 8,
+          "motivo": "A compreensão de sistemas operacionais e arquitetura de servidores é indispensável para proteger ativos."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "linux",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 1,
+          "peso": 2
+        },
+        {
+          "competencia": "python",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "nuvem",
+          "nivel_minimo": 1,
+          "peso": 3
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Fundamentos de redes (TCP/IP, DNS, roteamento, firewalls)",
+          "Administração Linux e auditoria de sistemas de arquivos",
+          "Conceitos de vulnerabilidades web (OWASP Top 10)",
+          "Análise de logs e ferramentas SIEM (como Splunk ou Wazuh)",
+          "Scripting em Python ou Bash para automação de tarefas de segurança"
+        ],
+        "certificacoes": [
+          {
+            "nome": "CompTIA Security+ (SY0-701)",
+            "emissor": "CompTIA",
+            "descricao": "Padrão de ouro para quem inicia em segurança da informação, aceita mundialmente."
+          },
+          {
+            "nome": "Certified in Cybersecurity (CC)",
+            "emissor": "ISC2",
+            "descricao": "Certificação acessível de entrada focada nos conceitos essenciais de segurança."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Laboratório de Detecção de Intrusão com Wazuh e Linux",
+            "descricao": "Documentação e configuração de um ambiente controlado com agente de monitoramento e regras customizadas de detecção de acessos anômalos.",
+            "tecnologias": ["Linux", "Wazuh", "Bash", "VirtualBox / Proxmox"]
+          },
+          {
+            "titulo": "Scanner de Vulnerabilidades Web Automatizado",
+            "descricao": "Script em Python para checagem automatizada de cabeçalhos de segurança HTTP, portas abertas e certificados SSL em domínios autorizados.",
+            "tecnologias": ["Python", "Sockets", "Requests", "Nmap"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "devops_sre",
+      "nome": "DevOps & Confiabilidade (SRE)",
+      "descricao": "Integração contínua (CI/CD), automação de infraestrutura como código, observabilidade e garantia de alta disponibilidade dos serviços.",
+      "pesos": {
+        "automacao_scripts": 9,
+        "infra_servidores": 9,
+        "resolucao_pressao": 8,
+        "tolerancia_oncall": 6,
+        "logica_algoritmos": 6,
+        "preferencia_remoto": 6
+      },
+      "penalidades": [
+        {
+          "pergunta": "automacao_scripts",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 10,
+          "motivo": "DevOps baseia-se primordialmente na eliminação de esforço manual por meio de scripts e automações."
+        },
+        {
+          "pergunta": "resolucao_pressao",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 8,
+          "motivo": "Engenheiros de confiabilidade lidam com estabilidade de produção e precisam tolerar investigações sob pressão."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "linux",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "docker",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "nuvem",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "python",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Linux avançado, permissões e shell scripting",
+          "Containers Docker e redes de containers",
+          "Pipelines de CI/CD (GitHub Actions ou GitLab CI)",
+          "Infraestrutura como Código com Terraform",
+          "Observabilidade e monitoramento (Prometheus e Grafana)"
+        ],
+        "certificacoes": [
+          {
+            "nome": "GitHub Actions Certified",
+            "emissor": "GitHub",
+            "descricao": "Validação de proficiência na construção e manutenção de pipelines automatizados de entrega contínua."
+          },
+          {
+            "nome": "CKA (Certified Kubernetes Administrator) ou KCNA",
+            "emissor": "Linux Foundation / CNCF",
+            "descricao": "KCNA para iniciantes e CKA para atuação prática na administração de clusters de contêineres."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Pipeline Completo de CI/CD com Testes e Deploy Automático",
+            "descricao": "Configuração de GitHub Actions com etapas de linting, testes automatizados, build de imagem Docker e publicação automática em registro.",
+            "tecnologias": ["GitHub Actions", "Docker", "Python / Node", "Bash"]
+          },
+          {
+            "titulo": "Pilha de Observabilidade com Prometheus e Grafana",
+            "descricao": "Ambiente Docker Compose orquestrado exportando métricas de uma aplicação simulada e painéis visuais no Grafana com alertas de CPU e latência.",
+            "tecnologias": ["Docker Compose", "Prometheus", "Grafana", "Node Exporter"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arquitetura_cloud",
+      "nome": "Arquitetura e Engenharia de Nuvem",
+      "descricao": "Desenho e orquestração de soluções escaláveis em provedores de nuvem, priorizando resiliência, custo-benefício e governança.",
+      "pesos": {
+        "infra_servidores": 10,
+        "automacao_scripts": 7,
+        "redes_seguranca": 7,
+        "resolucao_pressao": 6,
+        "gestao_comunicacao": 5,
+        "preferencia_remoto": 6
+      },
+      "penalidades": [
+        {
+          "pergunta": "infra_servidores",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 12,
+          "motivo": "Arquitetura Cloud pressupõe sólido entendimento de servidores, armazenamento e topologias de rede."
+        },
+        {
+          "pergunta": "redes_seguranca",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 6,
+          "motivo": "Soluções em nuvem demandam atenção contínua a isolamento de VPCs e regras de firewall."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "nuvem",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "linux",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "docker",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Principais serviços de nuvem: computação (EC2/Lambda), armazenamento (S3) e redes (VPC)",
+          "Segurança na nuvem: IAM, papéis e políticas de acesso mínimo",
+          "Provisionamento declarativo com Terraform",
+          "Arquiteturas orientadas a eventos e Serverless",
+          "Estratégias de otimização de custos e alta disponibilidade multi-zona"
+        ],
+        "certificacoes": [
+          {
+            "nome": "AWS Certified Solutions Architect – Associate (SAA-C03)",
+            "emissor": "Amazon Web Services",
+            "descricao": "Uma das certificações mais respeitadas no mercado para atestar capacidade de projetar soluções seguras e robustas."
+          },
+          {
+            "nome": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+            "emissor": "Microsoft",
+            "descricao": "Excelente ponto de partida para compreender os conceitos e serviços do ecossistema Microsoft Azure."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Infraestrutura em Nuvem provisionada com Terraform",
+            "descricao": "Repositório com código Terraform para subir uma VPC com subnets públicas e privadas, security groups e instância web com balanceador.",
+            "tecnologias": ["Terraform", "AWS / LocalStack", "Git"]
+          },
+          {
+            "titulo": "Arquitetura Serverless para Processamento de Imagens",
+            "descricao": "Fluxo que recebe uploads em bucket S3 e dispara função Lambda para redimensionamento e gravação de metadados.",
+            "tecnologias": ["AWS Lambda", "S3", "Python", "CloudWatch"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobile",
+      "nome": "Desenvolvimento Mobile",
+      "descricao": "Criação de aplicativos nativos ou híbridos com foco em performance móvel, experiência tátil e consumo eficiente de bateria e rede.",
+      "pesos": {
+        "desenvolvimento_mobile": 10,
+        "design_visual_ux": 8,
+        "trabalho_criativo_visual": 7,
+        "logica_algoritmos": 7,
+        "busca_retorno_rapido": 6,
+        "preferencia_remoto": 5
+      },
+      "penalidades": [
+        {
+          "pergunta": "desenvolvimento_mobile",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 14,
+          "motivo": "Esta trilha tem foco direto e exclusivo nos ecossistemas móveis e em suas especificidades técnicas."
+        },
+        {
+          "pergunta": "design_visual_ux",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 8,
+          "motivo": "Aplicações mobile demandam sensibilidade para padrões visuais de plataformas (Material Design e HIG da Apple)."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "git",
+          "nivel_minimo": 2,
+          "peso": 3
+        },
+        {
+          "competencia": "apis_rest",
+          "nivel_minimo": 2,
+          "peso": 4
+        },
+        {
+          "competencia": "html_css_js",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "testes_automatizados",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Linguagem para mobile moderno (Flutter com Dart ou React Native)",
+          "Ciclo de vida de telas e componentes em dispositivos móveis",
+          "Consumo de APIs REST e persistência local (SQLite/Hive)",
+          "Gerenciamento de estado (Bloc, Provider ou Redux)",
+          "Publicação e diretrizes das lojas Google Play e App Store"
+        ],
+        "certificacoes": [
+          {
+            "nome": "Meta React Native Specialization",
+            "emissor": "Meta / Coursera",
+            "descricao": "Formação prática cobrindo desenvolvimento cross-platform para iOS e Android."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "App de Hábitos Diários com Sincronização Local e Remota",
+            "descricao": "Aplicativo com interface intuitiva, notificações push locais, gráficos de progresso semanal e cache offline.",
+            "tecnologias": ["Flutter / Dart", "SQLite", "Provider"]
+          },
+          {
+            "titulo": "Catálogo de Filmes Mobile com Consumo de API Externa",
+            "descricao": "App com listagem infinita, tela de detalhes com trailers, favoritos persistidos e suporte a tema claro e escuro.",
+            "tecnologias": ["React Native", "TypeScript", "TMDB API"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "qa_qualidade",
+      "nome": "Engenharia de Qualidade & QA",
+      "descricao": "Planejamento e execução de estratégias de teste manuais e automatizados, prevenção de regressões e garantia de excelência do produto.",
+      "pesos": {
+        "testes_qualidade": 10,
+        "automacao_scripts": 7,
+        "logica_algoritmos": 6,
+        "gestao_comunicacao": 6,
+        "banco_dados": 5,
+        "preferencia_remoto": 6
+      },
+      "penalidades": [
+        {
+          "pergunta": "testes_qualidade",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 14,
+          "motivo": "QA exige atenção rigorosa a detalhes e verdadeira paixão por validar cenários e evitar falhas."
+        },
+        {
+          "pergunta": "automacao_scripts",
+          "condicao": "<=",
+          "valor": 1,
+          "penalidade": 6,
+          "motivo": "O papel contemporâneo de QA requer automatização frequente de fluxos de testes de regressão."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "testes_automatizados",
+          "nivel_minimo": 2,
+          "peso": 5
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 2,
+          "peso": 3
+        },
+        {
+          "competencia": "apis_rest",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "sql",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "python",
+          "nivel_minimo": 1,
+          "peso": 3
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Fundamentos de teste de software (caixa-preta, caixa-branca, tipos e níveis de teste)",
+          "Escrita e gestão de planos de teste e casos de uso",
+          "Automação de testes de API com Postman ou Newman",
+          "Automação de ponta a ponta (E2E) com Cypress ou Playwright",
+          "Integração de testes no pipeline de CI/CD"
+        ],
+        "certificacoes": [
+          {
+            "nome": "ISTQB Certified Tester Foundation Level (CTFL)",
+            "emissor": "ISTQB / BSTQB",
+            "descricao": "A principal e mais reconhecida certificação internacional para profissionais de qualidade de software."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Suíte Automatizada de Testes de API para E-commerce",
+            "descricao": "Coleção abrangente de testes de contrato e regras de negócio com geração de relatórios de cobertura em HTML.",
+            "tecnologias": ["Python", "Pytest", "Requests", "Allure Reports"]
+          },
+          {
+            "titulo": "Automação E2E de Fluxo Crítico de Cadastro e Compra",
+            "descricao": "Testes ponta a ponta automatizados simulando jornada de usuário com validação de mensagens de erro e sucesso.",
+            "tecnologias": ["Playwright / Cypress", "JavaScript", "GitHub Actions"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gestao_produtos",
+      "nome": "Gestão de Produtos (Product Management)",
+      "descricao": "Definição de visão e roadmap de produto, priorização de funcionalidades com base em valor de negócio e liderança cross-funcional.",
+      "pesos": {
+        "gestao_comunicacao": 10,
+        "interesse_lideranca": 9,
+        "design_visual_ux": 6,
+        "matematica_estatistica": 5,
+        "preferencia_remoto": 5
+      },
+      "penalidades": [
+        {
+          "pergunta": "gestao_comunicacao",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 14,
+          "motivo": "Gestão de Produtos é centrada em comunicação diária, negociação e alinhamento com pessoas."
+        },
+        {
+          "pergunta": "interesse_lideranca",
+          "condicao": "<=",
+          "valor": 2,
+          "penalidade": 10,
+          "motivo": "A posição de PM exige liderança por influência e definição do rumo estratégico de produtos."
+        }
+      ],
+      "requisitos_junior": [
+        {
+          "competencia": "estatistica",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "sql",
+          "nivel_minimo": 1,
+          "peso": 3
+        },
+        {
+          "competencia": "git",
+          "nivel_minimo": 1,
+          "peso": 2
+        }
+      ],
+      "roadmap": {
+        "tecnologias_prioritarias": [
+          "Metodologias ágeis (Scrum, Kanban) e escrita de histórias de usuário",
+          "Métricas de produto (CAC, LTV, Churn, NPS, retenção)",
+          "Mapeamento de jornada do usuário e discovery contínuo",
+          "Ferramentas de gestão e análise (Jira, Notion, Google Analytics, Mixpanel)",
+          "Noções de arquitetura de software para comunicação assertiva com desenvolvedores"
+        ],
+        "certificacoes": [
+          {
+            "nome": "Professional Scrum Product Owner (PSPO I)",
+            "emissor": "Scrum.org",
+            "descricao": "Validação internacional dos princípios ágeis de gestão e maximização de valor do produto."
+          },
+          {
+            "nome": "Product Management First Steps",
+            "emissor": "Product School",
+            "descricao": "Certificado introdutório focado no ciclo de vida de produtos digitais modernos."
+          }
+        ],
+        "projetos_portfolio": [
+          {
+            "titulo": "Case de Product Discovery e PRD (Product Requirements Document)",
+            "descricao": "Documento completo com pesquisa de mercado, matriz de priorização (RICE), personas, hipóteses e protótipo de baixa fidelidade no Figma.",
+            "tecnologias": ["Figma", "Notion", "Miro", "Matriz RICE"]
+          },
+          {
+            "titulo": "Análise de Métricas e Plano de Retenção para App SaaS",
+            "descricao": "Estudo de caso detalhando causas de cancelamento de assinaturas e proposta orientada a dados para aumentar retenção em 15%.",
+            "tecnologias": ["Google Sheets / SQL", "Mixpanel", "Apresentação Executiva"]
+          }
+        ]
+      }
+    }
+  ]
+}
