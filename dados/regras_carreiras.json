@@ -280,12 +280,12 @@
       "descricao": "Construção de APIs, regras de negócio, persistência de dados, integração de sistemas e garantia de escalabilidade.",
       "pesos": {
         "logica_algoritmos": 10,
-        "banco_dados": 9,
-        "automacao_scripts": 7,
+        "banco_dados": 10,
+        "automacao_scripts": 6,
         "testes_qualidade": 6,
-        "infra_servidores": 6,
+        "infra_servidores": 4,
         "preferencia_remoto": 5,
-        "busca_retorno_rapido": 6
+        "busca_retorno_rapido": 5
       },
       "penalidades": [
         {
@@ -712,6 +712,7 @@
         "automacao_scripts": 9,
         "infra_servidores": 9,
         "resolucao_pressao": 8,
+        "redes_seguranca": 7,
         "tolerancia_oncall": 6,
         "logica_algoritmos": 6,
         "preferencia_remoto": 6
